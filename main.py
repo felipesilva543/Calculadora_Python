@@ -22,9 +22,8 @@ class calculadoraSimples:
             except:
                 print('Digite um valor inteiro!')
 
-        qtd = menu(1, 'Soma', 'Subtração', 'Multiplicação', 'Divisão')
-
         while True:
+            qtd = menu(1, 'Soma', 'Subtração', 'Multiplicação', 'Divisão', 'Raiz Quadrada')
             while True:
                 try:
                     res = int(input('Opção: '))
@@ -40,6 +39,15 @@ class calculadoraSimples:
                     print(f'Multiplicação: {operacoes.mul(self.n1, self.n2)}')
                 if res == 4:
                     print(f'Divisão: {operacoes.div(self.n1, self.n2)}')
+                if res == 5:
+                    t2 = menu(0, 'RAIZ DE:', str(self.n1), str(self.n2))
+                    while True:
+                        op = int(input('OPÇÃO: '))
+                        if 0 < op <= t2:
+                            print(f'Raiz Quarada: {operacoes.sqrt(self.n1 if op == 1 else self.n2)}')
+                            break
+                        else: 
+                            print('Valor incorreto!')
             op = input('Fazer outra operação? [S/N]: ').capitalize().strip()
             if op[0] in 'Nn':
                 print('Até logo!')

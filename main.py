@@ -39,7 +39,7 @@ class calculadoraSimples:
     
 
     def imprimirResultado(self, res):
-        print(f'Resultado: {res}.')
+        print(f'\033[31mResultado: {res}.\033[m')
 
     def opcoes(self):
         qtdItensMenu, valores = menu(1, 'Soma', 'Subtração', 'Multiplicação', 'Divisão', 'Raiz Quadrada', 'SAIR')
@@ -78,18 +78,3 @@ class calculadoraSimples:
 
 calc1 = calculadoraSimples()
 calc1.Iniciar()
-
-
-
-""" op = input('Fazer outra operação? [S/N]: ').capitalize().strip()
-            if op[0] in 'Nn':
-                print('Até logo!')
-                break
-            else:
-                self.qtdItensMenu= menu(1, 'Soma', 'Subtração', 'Multiplicação', 'Divisão', 'Raiz Quadrada')
-            while True:
-                try:
-                    self.opc = int(input('Opção: '))
-                    break
-                except:
-                    print('Digite um valor inteiro!')"""

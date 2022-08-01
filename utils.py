@@ -21,12 +21,12 @@ def menu(titulo=0, *msg):
             print(f'\033[32m{i}\033[m - \033[34m{msg[i]}\033[m')
         if len(msg) > 1:
             print('\033[34m-\033[m'*(tam))
-        return len(msg) -1
+        return len(msg) -1, msg
     else:
         print('\033[34m-'*(tam),'\033[m')
         for i in range(0, len(msg)):
             print(f'\033[32m{i+1}\033[m - \033[34m{msg[i]}\033[m')
         if len(msg) > 1:
             print('\033[34m-\033[m'*(tam))
-        return len(msg) -1
+        return len(msg) -1, msg
     
